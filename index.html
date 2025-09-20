@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎄 Noel Cùng Em 🎄</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎄</text></svg>"
+    />
+  </head>
+  <body>
+    <div class="snowflakes" id="snowflakes"></div>
+
+    <div class="music-control">
+      <button id="musicBtn" class="music-btn">
+        <span class="play-icon">🎵</span>
+        <span class="pause-icon" style="display: none">⏸️</span>
+      </button>
+      <audio id="christmasMusic" loop>
+        <source
+          src="https://www.soundjay.com/misc/sounds/jingle_bells.mp3"
+          type="audio/mpeg"
+        />
+        <!-- Fallback: sử dụng URL khác nếu cần -->
+      </audio>
+    </div>
+
+    <header class="header">
+      <div class="christmas-lights">
+        <div class="light red"></div>
+        <div class="light green"></div>
+        <div class="light blue"></div>
+        <div class="light yellow"></div>
+        <div class="light red"></div>
+        <div class="light green"></div>
+        <div class="light blue"></div>
+      </div>
+      <h1 class="main-title">
+        <span class="sparkle">✨</span>
+        Merry Christmas
+        <span class="sparkle">✨</span>
+      </h1>
+      <p class="subtitle">Chúc em một mùa Noel thật ấm áp và hạnh phúc</p>
+    </header>
+
+    <main class="main-content">
+      <div class="christmas-tree">
+        <div class="tree-top">⭐</div>
+        <div class="tree-layer tree-layer-1">🌲</div>
+        <div class="tree-layer tree-layer-2">🌲</div>
+        <div class="tree-layer tree-layer-3">🌲</div>
+        <div class="tree-trunk">🟤</div>
+      </div>
+
+      <div class="message-container">
+        <div class="love-message">
+          <h2 class="message-title">Gửi em yêu của anh 💕</h2>
+          <p class="message-text">
+            Noel này, anh chỉ muốn được ở bên em, ngắm những bông tuyết rơi,
+            nghe tiếng chuông Noel vang lên, và cùng em tạo nên những kỷ niệm
+            đẹp nhất.
+          </p>
+          <p class="message-text">
+            Em có muốn cùng anh đi dạo phố, ngắm những ánh đèn Noel lấp lánh,
+            uống một tách chocolate nóng và chia sẻ những ước mơ của chúng ta
+            không?
+          </p>
+          <div class="invitation-box">
+            <h3>🎁 Lời mời đặc biệt 🎁</h3>
+            <p>Em có muốn cùng anh đi chơi Noel không?</p>
+            <p>Anh đã lên kế hoạch cho một buổi tối thật lãng mạn:</p>
+            <ul class="date-plans">
+              <li>🌟 Dạo phố Noel và chụp ảnh cùng nhau</li>
+              <li>☕ Uống chocolate nóng tại quán coffee ấm cúng</li>
+              <li>🎄 Ngắm cây thông Noel và làm điều ước</li>
+              <li>🎵 Nghe nhạc Noel và khiêu vũ dưới ánh đèn</li>
+              <li>💝 Trao nhau món quà Noel bất ngờ</li>
+            </ul>
+          </div>
+
+          <div class="response-buttons">
+            <button class="yes-btn" onclick="showFireworks()">
+              💖 Có, em muốn đi cùng anh! 💖
+            </button>
+            <button class="maybe-btn" onclick="showHearts()">
+              🤔 Để em suy nghĩ nhé...
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="santa-container">
+        <div class="santa">🎅</div>
+        <div class="reindeer">🦌</div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-decorations">
+        <span>🎁</span>
+        <span>❄️</span>
+        <span>🔔</span>
+        <span>🎄</span>
+        <span>⭐</span>
+        <span>🎁</span>
+        <span>❄️</span>
+      </div>
+      <p>&copy; 2025 - Với tất cả tình yêu dành cho em ❤️</p>
+      <p class="countdown" id="countdown">
+        Còn <span id="days"></span> ngày nữa là Noel!
+      </p>
+    </footer>
+
+    <!-- Fireworks container -->
+    <div class="fireworks-container" id="fireworksContainer"></div>
+
+    <!-- Hearts container -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
